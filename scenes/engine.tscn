@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scripts/controller_assignment.gd" type="Script" id=2]
+[ext_resource path="res://scripts/input.gd" type="Script" id=3]
+
+[node name="engine" type="Node2D"]
+
+[node name="input" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="controller_assignment" type="Node" parent="input"]
+script = ExtResource( 2 )
+
+[node name="room" type="Node2D" parent="."]
+
+[node name="player_0" parent="room" instance=ExtResource( 1 )]
+position = Vector2( 272, 300 )
+
+[node name="player_1" parent="room" instance=ExtResource( 1 )]
+position = Vector2( 432, 300 )
+player_id = 1
+
+[node name="player_2" parent="room" instance=ExtResource( 1 )]
+position = Vector2( 592, 300 )
+player_id = 2
+
+[node name="player_3" parent="room" instance=ExtResource( 1 )]
+position = Vector2( 752, 300 )
+player_id = 3
