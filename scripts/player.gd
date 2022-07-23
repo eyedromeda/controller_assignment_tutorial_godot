@@ -31,7 +31,7 @@ func get_input():
 
 func get_jump_input():
 	if controller_id != UNASSIGNED_CONTROLLER:
-		if controller.x_button_just_pressed:
+		if controller.x_button.just_pressed:
 			position.y -= 50
 
 func get_move_input():
